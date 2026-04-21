@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mis Tareas del Día</title>
+  <title>Cuidados de Pandas</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,21 +11,21 @@
     <aside class="sidebar" id="sidebar">
       <div class="brand">
         <div class="brand__logo">🗂️</div>
-        <h2>Mis Tareas</h2>
-        <p>Organiza tu día</p>
+        <h2>Panda Care</h2>
+        <p>Santuario y bienestar diario</p>
       </div>
 
       <nav class="menu">
-        <button class="menu__item active" data-view="all">📋 Todas las tareas</button>
-        <button class="menu__item" data-view="pending">🕒 Pendientes</button>
-        <button class="menu__item" data-view="completed">✅ Completadas</button>
-        <button class="menu__item" data-view="calendar">📅 Calendario</button>
-        <button class="menu__item" data-view="stats">📊 Estadísticas</button>
-        <button class="menu__item" data-view="settings">⚙️ Ajustes</button>
+        <button class="menu__item active" data-view="all">🐼 Todos los cuidados</button>
+        <button class="menu__item" data-view="pending">🕒 Cuidados pendientes</button>
+        <button class="menu__item" data-view="completed">✅ Cuidados realizados</button>
+        <button class="menu__item" data-view="calendar">📅 Rutina del santuario</button>
+        <button class="menu__item" data-view="stats">📊 Salud y métricas</button>
+        <button class="menu__item" data-view="settings">⚙️ Configuración del hábitat</button>
       </nav>
 
       <blockquote class="quote">
-        “La disciplina es el puente entre las metas y los logros.”
+        “Un panda feliz empieza con una rutina constante y respetuosa.”
       </blockquote>
     </aside>
 
@@ -36,22 +36,22 @@
             ☰
           </button>
           <div>
-            <h1>Mis Tareas del Día</h1>
-            <p>Agrega, organiza y completa tus tareas diarias</p>
+            <h1>Cuidados de Pandas</h1>
+            <p>Planifica alimentación, salud y enriquecimiento de cada panda</p>
           </div>
         </div>
         <button class="profile-btn" aria-label="Perfil">👤</button>
       </header>
 
       <section class="card form-card">
-        <h3>Agregar nueva tarea</h3>
+        <h3>Registrar nuevo cuidado</h3>
         <form id="taskForm" class="task-form">
           <div class="form-group form-group--grow">
-            <label for="taskInput">Tarea</label>
+            <label for="taskInput">Actividad de cuidado</label>
             <input
               type="text"
               id="taskInput"
-              placeholder="¿Qué necesitas hacer?"
+              placeholder="Ej: Revisar consumo de bambú de Mei Xiang"
               maxlength="120"
               required
             />
@@ -73,14 +73,14 @@
 
           <div class="form-group form-group--button">
             <label class="hidden-label">Acción</label>
-            <button type="submit" class="primary-btn">+ Agregar Tarea</button>
+            <button type="submit" class="primary-btn">+ Guardar cuidado</button>
           </div>
         </form>
       </section>
 
       <section class="card filter-card">
         <div class="filter-header">
-          <h3>Filtrar tareas</h3>
+          <h3>Filtrar cuidados</h3>
           <div class="stats">
             <article class="stat-box">
               <span>Total</span>
@@ -91,7 +91,7 @@
               <strong id="pendingCount">0</strong>
             </article>
             <article class="stat-box">
-              <span>Completadas</span>
+              <span>Realizados</span>
               <strong id="completedCount">0</strong>
             </article>
           </div>
@@ -99,26 +99,26 @@
 
         <div class="filters">
           <button class="filter-btn active" data-filter="all">📋 Todas</button>
-          <button class="filter-btn" data-filter="pending">🕒 Pendientes</button>
-          <button class="filter-btn" data-filter="completed">✅ Completadas</button>
+          <button class="filter-btn" data-filter="pending">🕒 Cuidados pendientes</button>
+          <button class="filter-btn" data-filter="completed">✅ Cuidados realizados</button>
         </div>
       </section>
 
       <section class="card list-card">
         <div class="list-header">
-          <h3>Lista de tareas</h3>
-          <button id="clearCompletedBtn" class="secondary-btn">Limpiar completadas</button>
+          <h3>Lista de cuidados</h3>
+          <button id="clearCompletedBtn" class="secondary-btn">Limpiar realizados</button>
         </div>
 
         <div id="taskList" class="task-list"></div>
 
         <p id="emptyState" class="empty-state">
-          No hay tareas para mostrar.
+          No hay cuidados para mostrar en este filtro.
         </p>
       </section>
 
       <footer class="footer">
-        <p>© 2024 Mis Tareas del Día | Hecho con ♡ por Estudiante Web</p>
+        <p>© 2026 Panda Care | Plataforma educativa para manejo de pandas</p>
       </footer>
     </main>
   </div>

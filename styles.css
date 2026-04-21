@@ -1,15 +1,15 @@
 :root {
-  --bg: #f5f7fb;
+  --bg: #f3f8f2;
   --surface: #ffffff;
-  --surface-2: #f8fafc;
-  --border: #dbe2ea;
+  --surface-2: #eef7ec;
+  --border: #d3e3d0;
   --text: #1f2937;
   --muted: #6b7280;
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --success: #16a34a;
+  --primary: #2f855a;
+  --primary-hover: #276749;
+  --success: #2f855a;
   --danger: #dc2626;
-  --warning: #f59e0b;
+  --warning: #b7791f;
   --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
   --radius: 16px;
   --radius-sm: 12px;

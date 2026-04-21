@@ -1,4 +1,4 @@
-const STORAGE_KEY = "mis_tareas_app";
+const STORAGE_KEY = "panda_care_app";
 const taskForm = document.getElementById("taskForm");
 const taskInput = document.getElementById("taskInput");
 const priorityInput = document.getElementById("priorityInput");
@@ -157,7 +157,7 @@ function renderTasks() {
       <input 
         class="task-check" 
         type="checkbox" 
-        aria-label="Completar tarea"
+        aria-label="Marcar cuidado como realizado"
         ${task.completed ? "checked" : ""}
       />
 
@@ -171,8 +171,8 @@ function renderTasks() {
       <div class="task-date">📅 ${formatDate(task.date)}</div>
 
       <div class="task-actions">
-        <button class="action-btn complete-btn" title="Cambiar estado">✓</button>
-        <button class="action-btn delete-btn" title="Eliminar">🗑️</button>
+        <button class="action-btn complete-btn" title="Cambiar estado del cuidado">✓</button>
+        <button class="action-btn delete-btn" title="Eliminar cuidado">🗑️</button>
       </div>
     `;
 
@@ -216,28 +216,35 @@ function saveTasks() {
 function loadTasks() {
   const saved = localStorage.getItem(STORAGE_KEY);
   if (!saved) {
+    const today = new Date();
+    const plusDays = (days) => {
+      const d = new Date(today);
+      d.setDate(d.getDate() + days);
+      return d.toISOString().split("T")[0];
+    };
+
     return [
       {
         id: crypto.randomUUID(),
-        title: "Estudiar JavaScript",
-        priority: "Media",
-        date: "2024-05-24",
-        completed: false,
-        createdAt: Date.now()
-      },
-      {
-        id: crypto.randomUUID(),
-        title: "Diseñar la interfaz de la app",
+        title: "Registrar peso y apetito de Bao Bao",
         priority: "Alta",
-        date: "2024-05-24",
+        date: plusDays(0),
         completed: false,
         createdAt: Date.now()
       },
       {
         id: crypto.randomUUID(),
-        title: "Leer un capítulo del libro",
+        title: "Preparar 25 kg de bambú fresco para la mañana",
+        priority: "Media",
+        date: plusDays(1),
+        completed: false,
+        createdAt: Date.now()
+      },
+      {
+        id: crypto.randomUUID(),
+        title: "Inspeccionar enriquecimiento ambiental del recinto",
         priority: "Baja",
-        date: "2024-05-25",
+        date: plusDays(2),
         completed: true,
         createdAt: Date.now()
       }
@@ -246,7 +253,8 @@ function loadTasks() {
 
   try {
     return JSON.parse(saved);
-  } catch {
+  } catch (error) {
+    console.warn("No se pudieron cargar los cuidados guardados.", error);
     return [];
   }
 }
