@@ -10,19 +10,22 @@
   <div class="app">
     <aside class="sidebar" id="sidebar">
       <div class="brand">
-        <div class="brand__logo">🗂️</div>
+        <div class="panda_logo">
+          <img src="imagen/panda.png" alt="Logo de Panda Care" />
+        </div>
         <h2>Panda Care</h2>
         <p>Santuario y bienestar diario</p>
       </div>
 
-      <nav class="menu">
+      <label class="block-label" for="menuPanel">Panel de navegación</label>
+      <div class="menu" id="menuPanel">
         <button class="menu__item active" data-view="all">🐼 Todos los cuidados</button>
         <button class="menu__item" data-view="pending">🕒 Cuidados pendientes</button>
         <button class="menu__item" data-view="completed">✅ Cuidados realizados</button>
         <button class="menu__item" data-view="calendar">📅 Rutina del santuario</button>
         <button class="menu__item" data-view="stats">📊 Salud y métricas</button>
         <button class="menu__item" data-view="settings">⚙️ Configuración del hábitat</button>
-      </nav>
+      </div>
 
       <blockquote class="quote">
         “Un panda feliz empieza con una rutina constante y respetuosa.”
@@ -43,7 +46,7 @@
         <button class="profile-btn" aria-label="Perfil">👤</button>
       </header>
 
-      <section class="card form-card">
+      <div class="card form-card">
         <h3>Registrar nuevo cuidado</h3>
         <form id="taskForm" class="task-form">
           <div class="form-group form-group--grow">
@@ -76,35 +79,36 @@
             <button type="submit" class="primary-btn">+ Guardar cuidado</button>
           </div>
         </form>
-      </section>
+      </div>
 
-      <section class="card filter-card">
+      <div class="card filter-card">
         <div class="filter-header">
           <h3>Filtrar cuidados</h3>
           <div class="stats">
-            <article class="stat-box">
+            <div class="stat-box">
               <span>Total</span>
               <strong id="totalCount">0</strong>
-            </article>
-            <article class="stat-box">
+            </div>
+            <div class="stat-box">
               <span>Pendientes</span>
               <strong id="pendingCount">0</strong>
-            </article>
-            <article class="stat-box">
+            </div>
+            <div class="stat-box">
               <span>Realizados</span>
               <strong id="completedCount">0</strong>
-            </article>
+            </div>
           </div>
         </div>
 
-        <div class="filters">
+        <label class="block-label" for="filterPanel">Vista rápida</label>
+        <div class="filters" id="filterPanel">
           <button class="filter-btn active" data-filter="all">📋 Todas</button>
           <button class="filter-btn" data-filter="pending">🕒 Cuidados pendientes</button>
           <button class="filter-btn" data-filter="completed">✅ Cuidados realizados</button>
         </div>
-      </section>
+      </div>
 
-      <section class="card list-card">
+      <div class="card list-card">
         <div class="list-header">
           <h3>Lista de cuidados</h3>
           <button id="clearCompletedBtn" class="secondary-btn">Limpiar realizados</button>
@@ -115,7 +119,7 @@
         <p id="emptyState" class="empty-state">
           No hay cuidados para mostrar en este filtro.
         </p>
-      </section>
+      </div>
 
       <footer class="footer">
         <p>© 2026 Panda Care | Plataforma educativa para manejo de pandas</p>
